@@ -31,6 +31,16 @@ class NewNotification implements ShouldBroadcast
     }
 
     /**
+     * The event's broadcast name.
+     *
+     * @return string
+     */
+    public function broadcastAs()
+    {
+        return 'new_subscription';
+    }
+
+    /**
      * Get the channels the event should broadcast on.
      *
      * @return Channel|array

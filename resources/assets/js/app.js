@@ -6,11 +6,11 @@
  */
 
 
-var pusher = new Pusher('');
+var pusher = new Pusher("'" + pusher_key + "'");
 
 var channel = pusher.subscribe('admin');
 
-channel.bind("NewNotification", function (data) { 
+channel.bind("new_subscription", function (data) { 
 	alert(data);
 	if (data.type && data.message) {
 		var current_notifications = $('.badge-notify').text() * 1;
