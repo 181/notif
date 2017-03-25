@@ -77,9 +77,9 @@
                                 <a href="#">
                                     <i class="fa fa-envelope"></i>
                                 </a>                                
-                                <span class="badge badge-notify" 
-                                style="display:{{ (isset($notifications) AND $notifications)? 'block' : 'none' }}">
-                                {{ $notifications }}</span>
+                                <span class="badge badge-notify {{ get_notification_class($notifications) }}">
+                                    {{ $notifications }}
+                                </span>
                             </li>
                         @endif                        
                     </ul>
